@@ -1,0 +1,1 @@
+This folder consolidates your application's styling resources, ensuring consistent branding and visual coherence. You can have subfolders for Variables, Mixins, and Components, organizing stylesheets accordingly.

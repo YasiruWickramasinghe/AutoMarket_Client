@@ -1,0 +1,1 @@
+This folder houses reusable UI components that can be utilized across different parts of your application. For instance, you can have separate folders for Button, Card, and Header, each storing their respective component files.

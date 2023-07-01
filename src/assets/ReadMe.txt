@@ -1,0 +1,1 @@
+This folder contains static assets such as images, fonts, and media files used to enhance visual elements throughout your application. For example, you can store hero images, icons, and background textures here.

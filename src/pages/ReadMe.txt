@@ -1,0 +1,1 @@
+This folder defines the top-level views or pages of your application. You can create separate folders for Home, Product, and Profile, and store their respective page components within those folders.

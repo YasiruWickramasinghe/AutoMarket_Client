@@ -1,0 +1,1 @@
+This folder contains reusable layout templates, offering consistent design patterns for various sections of your application. For instance, you can have templates for Landing, Dashboard, and Product Detail, facilitating faster development and maintaining visual consistency.
