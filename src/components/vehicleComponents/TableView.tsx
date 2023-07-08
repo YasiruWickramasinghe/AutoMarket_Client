@@ -20,8 +20,8 @@ const TableView: React.FC<TableViewProps> = ({
   handleUpdateClick,
   handleDeleteClick,
 }) => {
-  const bodyColumns = ['id', 'name', 'author', 'Action'];
-  const headColumns = ['ID', 'NAME', 'AUTHOR', 'ACTION'];
+  const bodyColumns = ['id', 'manufacturer', 'model', 'year', 'price', 'desc', 'Action'];
+  const headColumns = ['ID', 'MANUFACTURER', 'MODEL', 'YEAR', 'PRICE', 'DESCRIPTION', 'ACTION'];
 
   return (
     <Table

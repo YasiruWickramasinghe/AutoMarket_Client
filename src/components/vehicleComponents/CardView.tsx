@@ -27,10 +27,24 @@ const CardView: React.FC<CardViewProps> = ({ vehicles, onDelete, onShow, onUpdat
           <div className="card mb-4">
             <div className="card-body">
               <h5 className="card-title">{vehicle.model}</h5>
-              <h6 className="card-subtitle mb-2 text-muted">{vehicle.manufacturer}</h6>
-              <h6 className="card-subtitle mb-2 text-muted">{vehicle.year}</h6>\
-              <h6 className="card-subtitle mb-2 text-muted">{vehicle.price}</h6>
-              <h6 className="card-subtitle mb-2 text-muted">{vehicle.desc}</h6>
+              <div>
+              <h6 className="card-subtitle mb-2 text-muted">
+                <span className="font-weight-bold">Manufacturer: </span>
+                {vehicle.manufacturer}
+              </h6>
+              <h6 className="card-subtitle mb-2 text-muted">
+                <span className="font-weight-bold">Year: </span>
+                {vehicle.year}
+              </h6>
+              <h6 className="card-subtitle mb-2 text-muted">
+                <span className="font-weight-bold">Price: </span>
+                {vehicle.price}
+              </h6>
+              <h6 className="card-subtitle mb-2 text-muted">
+                <span className="font-weight-bold">Description: </span>
+                {vehicle.desc}
+              </h6>
+              </div>
             </div>
             <div className="card-footer d-flex justify-content-between">
               <Button

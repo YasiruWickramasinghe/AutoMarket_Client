@@ -7,6 +7,20 @@ const vehicleAPI = axios.create({
     baseURL: BASE_URL,
 });
 
+// Add an interceptor to include the authorization accessToken in the headers
+vehicleAPI.interceptors.request.use(
+    (config) => {
+      const accessToken = localStorage.getItem('accessToken'); // Retrieve the accessToken from localStorage or wherever you store it
+      if (accessToken) {
+        config.headers.Authorization = `Bearer ${accessToken}`;
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+
 interface GetVehiclesOptions {
     page?: number;
     limit?: number;

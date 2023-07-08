@@ -17,7 +17,7 @@ const Table: React.FC<TableProps> = ({ data, bodyColumns, headColumns, renderAct
     return (
       <div className="d-flex justify-content-center align-items-center">
         <div className="spinner-border" role="status">
-          <span className="visually-hidden">No Blogs</span>
+          <span className="visually-hidden">No Vehicless</span>
         </div>
       </div>
     );

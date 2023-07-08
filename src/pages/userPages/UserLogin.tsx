@@ -48,7 +48,7 @@ const UserLogin: React.FC = () => {
       // Reset message after 0.5 seconds
       setTimeout(() => {
         setSubmissionCompleted(false);
-        navigateTo('/profile');
+        navigateTo('/vehiclescardview');
       }, 500);
     } catch (error: any) {
 
