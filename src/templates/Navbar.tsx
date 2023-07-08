@@ -38,20 +38,18 @@ function Navbar() {
         localStorage.removeItem('refreshToken');
 
         Swal.fire({
-            icon: 'success',
-            title: 'Logged out!',
-            text: 'Come Again',
-            showConfirmButton: false,
-            timer: 1000,
-          });
+          icon: 'success',
+          title: 'Logged out!',
+          text: 'Come Again',
+          showConfirmButton: false,
+          timer: 1000,
+        });
       }
       navigateTo('/');
     } catch (error) {
       setError('Logout failed. Please try again.');
     }
   };
-  
-  
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -88,34 +86,55 @@ function Navbar() {
               ABOUT
             </NavLink>
           </li>
+          {isLoggedIn && (
+            <>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/vehiclestableview">
+                  TABLE VIEW
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/vehiclescardview">
+                  CARD VIEW
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/newvehicle">
+                  NEW VEHICLE
+                </NavLink>
+              </li>
+            </>
+          )}
         </ul>
-        {isLoggedIn ? (
-          <ul className="navbar-nav ml-auto text-right">
-            <li className="nav-item">
+        <ul className="navbar-nav ml-auto text-right">
+          {isLoggedIn ? (
+            <>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/profile">
                   PROFILE
                 </NavLink>
               </li>
-            <li className="nav-item">
-              <button className="nav-link btn btn-link" onClick={handleLogout}>
-                LOGOUT
-              </button>
-            </li>
-          </ul>
-        ) : (
-          <ul className="navbar-nav ml-auto text-right">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/login">
-                LOGIN
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/register">
-                SIGNUP
-              </NavLink>
-            </li>
-          </ul>
-        )}
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={handleLogout}>
+                  LOGOUT
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/login">
+                  LOGIN
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/register">
+                  SIGNUP
+                </NavLink>
+              </li>
+            </>
+          )}
+        </ul>
       </div>
       {error && <p className="text-danger">{error}</p>}
     </nav>

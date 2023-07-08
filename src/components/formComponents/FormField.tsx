@@ -4,7 +4,7 @@ import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 type FormFieldProps = {
   label: string;
   name: string;
-  type?: string;
+  type?: 'text' | 'number';
   defaultValue?: string;
   register: UseFormRegisterReturn;
   error: FieldError | undefined;
