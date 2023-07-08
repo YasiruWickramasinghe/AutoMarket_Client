@@ -1,0 +1,1 @@
+The service folder contains reusable backend API call modules, facilitating efficient communication between your application and the server for tasks like user authentication, data retrieval, and modification, ensuring consistency and faster development.
