@@ -137,7 +137,7 @@ const UpdateUser: React.FC = () => {
                 register={register('newPassword')}
                 error={errors.newPassword}
               />
-              {loginError && <p className="text-danger">{loginError}</p>}
+              {loginError && <p className="text-danger small">{loginError}</p>}
               <div className="row justify-content-center mt-3">
                 <div className="col-md-6">
                   <Button

@@ -85,7 +85,7 @@ const UserLogin: React.FC = () => {
                 register={register('password', { required: 'Password is required' })}
                 error={errors.password}
               />
-              {loginError && <p className="text-danger">{loginError}</p>}
+              {loginError && <p className="text-danger small">{loginError}</p>}
               <div className="d-flex justify-content-center mt-5">
                 <Button type="submit" buttonStyle="btn btn-success btn-block">
                   LOGIN

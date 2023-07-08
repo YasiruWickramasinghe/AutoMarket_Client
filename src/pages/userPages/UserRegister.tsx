@@ -95,7 +95,7 @@ const UserRegister: React.FC = () => {
                 register={register('password', { required: 'Password is required' })}
                 error={errors.password}
               />
-              {registrationError && <p className="text-danger">{registrationError}</p>}
+              {registrationError && <p className="text-danger small">{registrationError}</p>}
               <div className="d-flex justify-content-center mt-5">
                 <Button onClick={handleSubmit(onSubmit)} buttonStyle={'btn btn-success btn-block'}>
                   REGISTER
