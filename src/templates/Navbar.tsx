@@ -103,6 +103,11 @@ function Navbar() {
                   NEW VEHICLE
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/myvehicles">
+                  MY VEHICLE
+                </NavLink>
+              </li>
             </>
           )}
         </ul>

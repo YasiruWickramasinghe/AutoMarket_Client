@@ -18,6 +18,7 @@ import VehiclesCardView from './pages/vehiclePages/VehiclesCardView';
 import NewVehicle from './pages/vehiclePages/NewVehicle';
 import UpdateVehicle from './pages/vehiclePages/UpdateVehicle';
 import VehicleItem from './pages/vehiclePages/VehicleItem';
+import UserVehicle from './pages/vehiclePages/UserVehicle';
 
 
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/newvehicle" Component={NewVehicle} />
             <Route path="/updatevehicle/:id" Component={UpdateVehicle} />
             <Route path="/vehicleitem/:id" Component={VehicleItem} />
+            <Route path="/myvehicles" Component={UserVehicle} />
           </Routes>
         </div>
         <Footer />
