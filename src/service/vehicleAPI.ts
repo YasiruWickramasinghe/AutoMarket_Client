@@ -64,6 +64,17 @@ export const getVehicleById = async (id: string): Promise<Vehicle> => {
     }
 };
 
+export const getVehicleByUserId = async (userId: string): Promise<Vehicle[]> => {
+    try {
+      const response: AxiosResponse<Vehicle[]> = await vehicleAPI.get(`/vehicles/user/${userId}`);
+      return response.data;
+    } catch (error: any) {
+      handleRequestError(error);
+      throw error;
+    }
+  };
+  
+
 export const createVehicle = async (vehicleData: Partial<Vehicle>): Promise<Vehicle> => {
     try {
         const response: AxiosResponse<Vehicle> = await vehicleAPI.post('/vehicles', vehicleData);
